@@ -2,7 +2,7 @@
 
 
 
-##         Title: self-driving Car using TD3(Twin Delayed Deep Deterministic Policy Gradient Algorithm**)**
+##        **Title: self-driving Car using TD3(Twin Delayed Deep Deterministic Policy Gradient Algorithm)**
 
 
 
@@ -32,7 +32,7 @@ Here Goal is a point in a city map and A & B can be any two points.
 
  
 
-####**EXPECTATION**
+#### **EXPECTATION**
 
 1. You are indeed using TD3
 
@@ -111,7 +111,6 @@ TD3 has 6 networks actor, target actor, two critic network and two target critic
 
 
 **Actor Network:**
-
 Actor(
   (convolution_actor_module): ModuleList(
     (0): Conv2d(1, 8, kernel_size=(3, 3), stride=(1, 1))
