@@ -122,7 +122,13 @@ class Car(Widget):
         if self.sensor3_x > longueur - 10 or self.sensor3_x < 10 or self.sensor3_y > largeur - 10 or self.sensor3_y < 10:
             self.signal3 = 10.
 
-
+class Ball1(Widget):
+    pass
+class Ball2(Widget):
+    pass
+class Ball3(Widget):
+    pass
+	
 # function to extract image and rotate
 # img - MASK image represented as numpy array with 0's & 1's
 # angle - Angle car makes with x axis of environment
@@ -160,7 +166,10 @@ def get_corp_and_rotate_mask_imag(img, angle, center, crop_size, fill_with=255):
 
 class Game(Widget):
     car = ObjectProperty(None)
-
+    ball1 = ObjectProperty(None)
+    ball2 = ObjectProperty(None)
+    ball3 = ObjectProperty(None)
+	
     # intialize TD3 variables with default values
     total_timesteps = 0
     episode_num = 0
