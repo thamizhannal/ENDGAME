@@ -111,76 +111,15 @@ TD3 has 6 networks actor, target actor, two critic network and two target critic
 
 
 **Actor Network:**
-Actor(
-  (convolution_actor_module): ModuleList(
-    (0): Conv2d(1, 8, kernel_size=(3, 3), stride=(1, 1))
-    (1): ReLU()
-    (2): BatchNorm2d(8, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
-    (3): Conv2d(8, 16, kernel_size=(3, 3), stride=(2, 2))
-    (4): ReLU()
-    (5): BatchNorm2d(16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
-    (6): Conv2d(16, 16, kernel_size=(3, 3), stride=(1, 1))
-    (7): ReLU()
-    (8): BatchNorm2d(16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
-    (9): AdaptiveAvgPool2d(output_size=(1, 1))
-    (10): Flatten()
-  )
-  (linear): ModuleList(
-    (0): Linear(in_features=18, out_features=16, bias=True)
-    (1): ReLU()
-    (2): Linear(in_features=16, out_features=8, bias=True)
-    (3): ReLU()
-    (4): Linear(in_features=8, out_features=1, bias=True)
-  )
-)
+
+![ActorCNN](https://raw.githubusercontent.com/thamizhannal/ENDGAME/master/images/actor.png)
+
 
 #### **Critic Network**
 
+![Critic1 CNN](https://raw.githubusercontent.com/thamizhannal/ENDGAME/master/images/critic1.png)
 
-
-Critic(
-  (convolution_critic1_module): ModuleList(
-    (0): Conv2d(1, 8, kernel_size=(3, 3), stride=(1, 1))
-    (1): ReLU()
-    (2): BatchNorm2d(8, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
-    (3): Conv2d(8, 16, kernel_size=(3, 3), stride=(2, 2))
-    (4): ReLU()
-    (5): BatchNorm2d(16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
-    (6): Conv2d(16, 16, kernel_size=(3, 3), stride=(1, 1))
-    (7): ReLU()
-    (8): BatchNorm2d(16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
-    (9): AdaptiveAvgPool2d(output_size=(1, 1))
-    (10): Flatten()
-  )
-  (linear_critic1_module): ModuleList(
-    (0): Linear(in_features=19, out_features=16, bias=True)
-    (1): ReLU()
-    (2): Linear(in_features=16, out_features=8, bias=True)
-    (3): ReLU()
-    (4): Linear(in_features=8, out_features=1, bias=True)
-  )
-  (convolution_critic2_module): ModuleList(
-    (0): Conv2d(1, 8, kernel_size=(3, 3), stride=(1, 1))
-    (1): ReLU()
-    (2): BatchNorm2d(8, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
-    (3): Conv2d(8, 16, kernel_size=(3, 3), stride=(2, 2))
-    (4): ReLU()
-    (5): BatchNorm2d(16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
-    (6): BatchNorm2d(16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
-    (7): Conv2d(16, 16, kernel_size=(3, 3), stride=(1, 1))
-    (8): ReLU()
-    (9): BatchNorm2d(16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
-    (10): AdaptiveAvgPool2d(output_size=(1, 1))
-    (11): Flatten()
-  )
-  (linear_critic2_module): ModuleList(
-    (0): Linear(in_features=19, out_features=16, bias=True)
-    (1): ReLU()
-    (2): Linear(in_features=16, out_features=8, bias=True)
-    (3): ReLU()
-    (4): Linear(in_features=8, out_features=1, bias=True)
-  )
-)
+![Critic2 CNN](https://raw.githubusercontent.com/thamizhannal/ENDGAME/master/images/critic2.png)
 
 **Episode Done:**
 
